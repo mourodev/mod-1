@@ -1,0 +1,24 @@
+---
+import Link from "./Link.astro";
+---
+
+<ul class="navbar">
+  <li>
+    <Link href={"#"}>GitHub</Link>
+  </li>
+  <li>
+    <Link href={"#"}>Linkedin</Link>
+  </li>
+  <li>
+    <Link href={"#"}>Instagram</Link>
+  </li>
+</ul>
+
+<style>
+  .navbar {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    padding: 0;
+  }
+</style>
