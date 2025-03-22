@@ -1,0 +1,102 @@
+---
+import Navbar from "./Navbar.astro";
+import { Image } from "astro:assets";
+import profile from "../assets/profile.jpg";
+import { Icon } from "astro-icon/components";
+---
+
+<div class="container">
+  <nav>
+    <Navbar />
+  </nav>
+  <div class="profile">
+    <Image
+      src={profile}
+      alt="Mouro - Desenvolvedor Front-end minha foto de perfil"
+      height={100}
+      format="avif"
+      class={"profile-image"}
+      loading={"eager"}
+    />
+
+    <div class="profile-info">
+      <div>
+        <h1 class="profile-name">
+          Mouro <Icon
+            name={"verified"}
+            size={13}
+            title="Verificado gratuitamente"
+          />
+        </h1>
+        <p class="profile-job">Desenvolvedor Front-end</p>
+      </div>
+      <div>
+        <p class="profile-description">
+          Olá, eu sou Mouro, <span>Desenvolvedor Front-end</span> comprometido em
+          criar experiências digitais que realmente fazem a diferença. Para mim,
+          tecnologia é o caminho para o sucesso, e eu coloco essa visão em prática
+          em cada projeto. Se você quer elevar sua ideia a outro patamar, estou aqui
+          para isso. Explore minha trajetória e meus trabalhos e vamos começar algo
+          incrível juntos!
+        </p>
+
+        <span class="profile-location"
+          ><Icon
+            name={"location"}
+            size={13}
+            title="Localização de Mouro - RJ Brasil"
+          />
+          Rio de Janeiro - Brasil</span
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: var(--space-l);
+    margin-bottom: var(--space-l);
+  }
+  .profile-info {
+    display: grid;
+    gap: var(--space-xs);
+  }
+  .profile-image {
+    border-radius: 4px;
+    margin-bottom: var(--space-s);
+  }
+
+  .profile-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.6rem;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+  }
+  .profile-job {
+    color: #fff;
+  }
+
+  .profile-description {
+    color: var(--color-text-body);
+    margin-top: var(--space-s);
+
+    & span {
+      color: var(--color-text-light);
+      font-weight: bold;
+    }
+  }
+
+  .profile-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: -5px;
+    margin-top: var(--space-s);
+    font-weight: bold;
+  }
+</style>

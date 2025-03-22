@@ -9,7 +9,7 @@ import "@fontsource-variable/inter";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -17,7 +17,7 @@ import "@fontsource-variable/inter";
       name="description"
       content="Sou um desenvolvedor front-end  apaixonado por criar experiências digitais incríveis. Com habilidades em HTML, CSS, JavaScript e frameworks modernos, estou pronto para transformar suas ideias em realidade. Entre em contato para discutir seu próximo projeto!"
     />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -31,12 +31,17 @@ import "@fontsource-variable/inter";
     --color-primary: hsl(212, 100%, 48%);
     --color-primary-dark: hsl(213, 100%, 43%);
     --color-primary-light: hsl(213, 100%, 60%);
-
     --color-bg-dark: hsl(240, 4%, 10%);
     --color-text-light: hsl(210, 17%, 98%);
-
+    --color-text-body: hsl(210, 17%, 85%);
     --color-bg-card: hsl(240, 4%, 15%);
     --color-border: hsl(240, 4%, 20%);
+
+    --space-xs: clamp(0.75rem, 0.75rem + 0vw, 0.75rem);
+    --space-s: clamp(1rem, 1rem + 0vw, 1rem);
+    --space-m: clamp(1.5rem, 1.5rem + 0vw, 1.5rem);
+    --space-l: clamp(2rem, 2rem + 0vw, 2rem);
+    --space-xl: clamp(3rem, 3rem + 0vw, 3rem);
   }
 
   *,
@@ -58,8 +63,10 @@ import "@fontsource-variable/inter";
     color: var(--color-text-light);
     font-family: "Inter", sans-serif;
     display: grid;
+    gap: var(--space-xl);
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+    font-size: 1rem;
   }
 
   img,
@@ -101,7 +108,7 @@ import "@fontsource-variable/inter";
   }
 
   .container {
-    width: min(100% -2rem, 900px);
+    width: min(100% - 2rem, 800px);
     margin-inline: auto;
   }
 </style>
