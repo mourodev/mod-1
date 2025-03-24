@@ -2,19 +2,27 @@
 import Link from "./Link.astro";
 ---
 
-<ul class="navbar">
-  <li>
-    <Link href={"/"}>home</Link>
-  </li>
-  <li>
-    <Link href={"/sobre-mim"}>sobre mim</Link>
-  </li>
-  <li>
-    <Link href={"/projetos"}>projetos</Link>
-  </li>
-</ul>
+<nav>
+  <ul class="navbar">
+    <li>
+      <Link href={"/"}>home</Link>
+    </li>
+    <li>
+      <Link href={"/sobre-mim"}>sobre mim</Link>
+    </li>
+    <li>
+      <Link href={"/projetos"}>projetos</Link>
+    </li>
+  </ul>
+</nav>
 
 <style>
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: var(--space-l);
+    margin-bottom: var(--space-l);
+  }
   .navbar {
     display: flex;
     gap: 1rem;

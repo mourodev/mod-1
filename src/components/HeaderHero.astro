@@ -6,9 +6,8 @@ import { Icon } from "astro-icon/components";
 ---
 
 <div class="container">
-  <nav>
-    <Navbar />
-  </nav>
+  <Navbar />
+
   <div class="profile">
     <Image
       src={profile}
@@ -54,12 +53,6 @@ import { Icon } from "astro-icon/components";
 </div>
 
 <style>
-  nav {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: var(--space-l);
-    margin-bottom: var(--space-l);
-  }
   .profile-info {
     display: grid;
     gap: var(--space-xs);

@@ -1,12 +1,48 @@
 ---
 import Subtitle from "./Subtitle.astro";
 import ProjectCard from "./ProjectCard.astro";
+import projects from "../data/projects.json";
+
+const sortedProjects = projects.sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
+const recentProjects = sortedProjects.slice(0, 4);
 ---
 
 <div class="container">
-  <Subtitle text="Confira meus projetos" />
+  <div class="grid-content">
+    <Subtitle text="Confira meus projetos" />
 
-  <div class="grid-projects">
-    <ProjectCard />
+    <div class="grid-projects">
+      {
+        recentProjects.map((project) => (
+          <ProjectCard
+            title={project.title}
+            description={project.description}
+            link={project.link}
+          />
+        ))
+      }
+    </div>
   </div>
 </div>
+
+<style>
+  .grid-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .grid-projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .grid-projects [ProjectCard]:hover {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
+  }
+</style>

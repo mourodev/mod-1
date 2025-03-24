@@ -1,16 +1,50 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
+import projects from "../data/projects.json";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout title="Projetos">
   <header>
-    <Navbar />
+    <div class="container">
+      <Navbar />
+    </div>
   </header>
   <main>
-    <h2>Projetos</h2>
+    <div class="container">
+      <h2>Projetos</h2>
+      <p>
+        Olá! Estou aqui para apresentar meus projetos, frutos de minha paixão
+        por tecnologia e inovação. Cada um deles é o resultado de horas de
+        dedicação, pesquisa e desenvolvimento, com o objetivo de criar soluções
+        criativas e eficazes para problemas reais.
+      </p>
+
+      <div class="grid-projects">
+        {
+          projects.map((project) => (
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              link={project.link}
+            />
+          ))
+        }
+      </div>
+    </div>
   </main>
   <footer>
     <h2>Footer</h2>
   </footer>
 </Layout>
+
+<style>
+  .grid-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+
+    margin-top: var(--space-l);
+  }
+</style>
