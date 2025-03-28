@@ -19,19 +19,5 @@
     "description": "Pokedex feita com React e Typescript para o curso de React da Alura Cursos OnlinePokedex feita com React e Typescript para o curso de React da Alura Cursos OnlinePokedex feita com React e Typescript para o curso de React da Alura Cursos Online",
     "date": "2024-03-01",
     "link": "https://example.com/project3"
-  },
-  {
-    "id": 4,
-    "title": "Projeto 4",
-    "description": "Pokedex feita com React e Typescript para o curso de React da Alura Cursos OnlinePokedex feita com React e Typescript para o curso de React da Alura Cursos Online4",
-    "date": "2024-04-01",
-    "link": "https://example.com/project4"
-  },
-  {
-    "id": 5,
-    "title": "Projeto 5",
-    "description": "Descrição do projeto 5",
-    "date": "2023-05-01",
-    "link": "https://example.com/project5"
   }
 ]

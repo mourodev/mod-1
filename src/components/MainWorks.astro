@@ -10,39 +10,25 @@ const recentProjects = sortedProjects.slice(0, 4);
 ---
 
 <div class="container">
+  <Subtitle text="Confira meus projetos" />
   <div class="grid-content">
-    <Subtitle text="Confira meus projetos" />
-
-    <div class="grid-projects">
-      {
-        recentProjects.map((project) => (
-          <ProjectCard
-            title={project.title}
-            description={project.description}
-            link={project.link}
-          />
-        ))
-      }
-    </div>
+    {
+      recentProjects.map((project) => (
+        <ProjectCard
+          title={project.title}
+          description={project.description}
+          link={project.link}
+        />
+      ))
+    }
   </div>
 </div>
 
 <style>
   .grid-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
-  }
-
-  .grid-projects {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .grid-projects [ProjectCard]:hover {
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.05);
+    margin-top: var(--space-l);
   }
 </style>

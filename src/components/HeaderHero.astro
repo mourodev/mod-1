@@ -29,8 +29,8 @@ import { Icon } from "astro-icon/components";
         </h1>
         <p class="profile-job">Desenvolvedor Front-end</p>
       </div>
-      <div>
-        <p class="profile-description">
+      <div class="profile-description">
+        <p>
           Olá, eu sou Mouro, <span>Desenvolvedor Front-end</span> comprometido em
           criar experiências digitais que realmente fazem a diferença. Para mim,
           tecnologia é o caminho para o sucesso, e eu coloco essa visão em prática
@@ -47,6 +47,11 @@ import { Icon } from "astro-icon/components";
           />
           Rio de Janeiro - Brasil</span
         >
+        <a href="/sobre-mim" class="link-profile">  Conheça minha trajetória 
+          <Icon name="person" size={13} />
+       
+        
+        </a>
       </div>
     </div>
   </div>
@@ -76,7 +81,6 @@ import { Icon } from "astro-icon/components";
 
   .profile-description {
     color: var(--color-text-body);
-    margin-top: var(--space-s);
 
     & span {
       color: var(--color-text-light);
@@ -91,5 +95,30 @@ import { Icon } from "astro-icon/components";
     margin-left: -5px;
     margin-top: var(--space-s);
     font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  .link-profile {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: var(--space-s);
+    font-size: 0.9rem;
+    background-color: var(--color-bg-card);
+    padding: var(--space-xs) var(--space-m);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:focus {
+      color: var(--color-primary);#fff
+    }
   }
 </style>
