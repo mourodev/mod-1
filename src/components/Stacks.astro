@@ -1,0 +1,50 @@
+---
+import stacks from "../data/stacks.json";
+import Subtitle from "./Subtitle.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<div class="container">
+  <Subtitle text="Tecnologias que utilizo no dia a dia" />
+  <p>
+    No front-end, eu sou um verdadeiro fã das tecnologias que permitem criar
+    experiências incríveis para os usuários
+  </p>
+
+  <div class="stacks-container">
+    {
+      stacks.map((stack) => (
+        <div class="stack-item">
+          <Icon name={stack.name} size={30} />
+          <span>{stack.label}</span>
+          <a href={stack.link} target="_blank" rel="noopener noreferrer">
+            {" "}
+            Saiba mais
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .stacks-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .stack-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .stack-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+  }
+</style>

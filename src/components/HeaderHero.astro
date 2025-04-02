@@ -48,9 +48,8 @@ import { Icon } from "astro-icon/components";
           Rio de Janeiro - Brasil</span
         >
         <a href="/sobre-mim" class="link-profile">  Conheça minha trajetória 
-          <Icon name="person" size={13} />
+          <Icon name="arrow" size={20} />
        
-        
         </a>
       </div>
     </div>
@@ -111,10 +110,12 @@ import { Icon } from "astro-icon/components";
     padding: var(--space-xs) var(--space-m);
     border: 1px solid var(--color-border);
     border-radius: 4px;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
 
     &:hover {
-      color: var(--color-primary);
+      background-color: var(--color-card-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     &:focus {
