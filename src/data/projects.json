@@ -2,22 +2,47 @@
   {
     "id": 1,
     "title": "Pokedex",
-    "description": "Pokedex feita com React e Typescript para o curso de React da Alura Cursos Online Pokedex feita com React e Typescript para o curso de React da Alura Cursos Online",
+    "description": "Projeto de pokedex feito com Angular e Tailwind CSS para testar minhas habilidades em Angular",
     "date": "2024-01-01",
-    "link": "https://example.com/project1"
+    "link": "https://example.com/project1",
+    "technologies": [
+      "Angular",
+      "Tailwind CSS",
+      "Typescript",
+      "RxJS"
+    ]
   },
   {
     "id": 2,
     "title": "Fintech",
-    "description": "Projeto de fintech feito com React e Typescript para o curso de React da Alura Cursos Online",
+    "description": "Projeto  pessoal de fintech feito com React e Typescript",
     "date": "2024-02-01",
-    "link": "https://example.com/project2"
+    "link": "https://example.com/project2",
+    "technologies": [
+      "React",
+      "Typescript"
+    ]
   },
   {
     "id": 3,
-    "title": "Projeto 3",
-    "description": "Pokedex feita com React e Typescript para o curso de React da Alura Cursos OnlinePokedex feita com React e Typescript para o curso de React da Alura Cursos OnlinePokedex feita com React e Typescript para o curso de React da Alura Cursos Online",
+    "title": "Convites Online",
+    "description": "Projeto de convites online feito com React e Typescript para resolver um problema de um amigo de minha familia",
     "date": "2024-03-01",
-    "link": "https://example.com/project3"
+    "link": "https://example.com/project3",
+    "technologies": [
+      "Atro Build",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Barber Shop",
+    "description": "Projeto de barber shop feito com React e Typescript para o curso de React da Alura Cursos Online  ",
+    "date": "2024-04-01",
+    "link": "https://example.com/project4",
+    "technologies": [
+      "Atro Build",
+      "Tailwind CSS"
+    ]
   }
 ]
