@@ -23,7 +23,7 @@ import { Icon } from "astro-icon/components";
         <h1 class="profile-name">
           Mouro <Icon
             name={"verified"}
-            size={13}
+            size={15}
             title="Verificado gratuitamente"
           />
         </h1>
@@ -31,25 +31,26 @@ import { Icon } from "astro-icon/components";
       </div>
       <div class="profile-description">
         <p>
-          Olá, eu sou Mouro, <span>Desenvolvedor Front-end</span> comprometido em
-          criar experiências digitais que realmente fazem a diferença. Para mim,
-          tecnologia é o caminho para o sucesso, e eu coloco essa visão em prática
-          em cada projeto. Se você quer elevar sua ideia a outro patamar, estou aqui
-          para isso. Explore minha trajetória e meus trabalhos e vamos começar algo
-          incrível juntos!
+          Olá, eu sou Mouro, <span class="profile-job"
+            >Desenvolvedor Front-end</span
+          > comprometido em criar experiências digitais que realmente fazem a diferença.
+          Para mim, tecnologia é o caminho para o sucesso, e eu coloco essa visão
+          em prática em cada projeto. Se você quer elevar sua ideia a outro patamar,
+          estou aqui para isso. Explore minha trajetória e meus trabalhos e vamos
+          começar algo incrível juntos!
         </p>
 
         <span class="profile-location"
           ><Icon
             name={"location"}
-            size={13}
+            size={20}
             title="Localização de Mouro - RJ Brasil"
           />
           Rio de Janeiro - Brasil</span
         >
-        <a href="/sobre-mim" class="link-profile">  Conheça minha trajetória 
+        <a href="/sobre-mim" class="link-profile">
+          Conheça minha trajetória
           <Icon name="arrow" size={20} />
-       
         </a>
       </div>
     </div>
@@ -75,13 +76,13 @@ import { Icon } from "astro-icon/components";
     tab-size: 4;
   }
   .profile-job {
-    color: #fff;
+    color: var(--color-text-muted);
   }
 
   .profile-description {
     color: var(--color-text-body);
 
-    & span {
+    & .profile-job {
       color: var(--color-text-light);
       font-weight: bold;
     }
@@ -91,10 +92,10 @@ import { Icon } from "astro-icon/components";
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-left: -5px;
     margin-top: var(--space-s);
     font-weight: bold;
     font-size: 0.9rem;
+    color: var(--color-text-muted);
   }
 
   .link-profile {
@@ -108,18 +109,17 @@ import { Icon } from "astro-icon/components";
     font-size: 0.9rem;
     background-color: var(--color-bg-card);
     padding: var(--space-xs) var(--space-m);
-    border: 1px solid var(--color-border);
     border-radius: 4px;
     transition: all 0.2s ease;
 
     &:hover {
       background-color: var(--color-card-hover);
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     &:focus {
-      color: var(--color-primary);#fff
+      color: var(--color-primary);
     }
   }
 </style>

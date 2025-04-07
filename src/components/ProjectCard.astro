@@ -7,17 +7,24 @@ interface Props {
 }
 
 const { title, description, link, technologies } = Astro.props;
+
+import { Icon } from "astro-icon/components";
 ---
 
 <a href={link} target="_blank" rel="noopener noreferrer" class="project-card">
   <h3>{title}</h3>
+  <span class="line"></span>
+
   <div class="project-description">
     <p>{description}</p>
+
     <div class="project-technologies">
       {technologies?.map((tech) => <span class="tech-badge">{tech}</span>)}
     </div>
   </div>
-  <span class="project-action">Ver no GitHub →</span>
+  <span class="project-action"
+    >Ver no GitHub <Icon name="arrow" class="icon" />
+  </span>
 </a>
 
 <style>
@@ -77,8 +84,26 @@ const { title, description, link, technologies } = Astro.props;
 
   .project-action {
     margin-top: auto;
-    color: var(--color-primary);
+    color: var(--color-text-muted);
     font-weight: 500;
     font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  .project-card:hover .project-action {
+    color: var(--color-primary);
+  }
+  .project-card:hover .project-action .icon {
+    transform: translateX(3px);
+    transition: transform 0.2s ease;
+  }
+  .line {
+    border: solid 1px var(--color-border);
   }
 </style>
